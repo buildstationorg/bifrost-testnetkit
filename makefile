@@ -15,6 +15,9 @@ deploy-testnet:
 deploy-all-contracts-on-all-networks:
 	forge script script/DeployAllContracts.s.sol --slow --multi --broadcast --account dev --sender ${SENDER} --verify -vvvv
 
+setup-all-contracts-on-all-networks:
+	forge script script/SetupAllContracts.s.sol --slow --multi --broadcast --account dev --sender ${SENDER} -vvvv
+
 interact:
 	forge script script/Interactions.s.sol --rpc-url ${BASE_SEPOLIA_RPC} --account dev --sender ${SENDER} --broadcast -vvvv
 
